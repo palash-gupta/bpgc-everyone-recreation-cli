@@ -40,11 +40,8 @@ while True:
     query += ";"
 
     cursor.execute(query)
-    out = cursor.fetchall()
-    
-    print(f"\n{len(out)} rows found.\n")
 
-    for i in out:
+    for i in cursor.fetchall():
         for j in i:
             print(j, end=((30 - len(str(j)))*" " + "|" ))
         print("\n" + "-" * 123)
