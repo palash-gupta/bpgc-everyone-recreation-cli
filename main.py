@@ -15,8 +15,6 @@ while True:
     room = input("Enter room number query: ")
     order = input("Order By (n for name, i for id, h for hostel, r for room, leave blank for default): ")
 
-    print("\n" + "-" * 123)
-
     query = f"""SELECT "Name", "Student ID", "Hostel / Room or PS", "Room No." FROM students"""
     #"Name" LIKE "%{name}%" AND "Student ID" LIKE "%{idq}%" AND "Hostel / Room or PS" LIKE "%{hostel}%" AND "Room No." LIKE "%{room}%";"""
 
@@ -42,7 +40,8 @@ while True:
     cursor.execute(query)
     out = cursor.fetchall()
     
-    print(f"\n{len(out)} rows found.\n")
+    print(f"\n{len(out)} rows found.")
+    print("\n" + "-" * 123)
 
     for i in out:
         for j in i:
