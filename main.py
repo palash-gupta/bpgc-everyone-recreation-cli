@@ -9,7 +9,7 @@ print("Enter name, ID, hostel, room queries (leave blank if you want to see all)
 ordermap = {"n": '"Name"', "i": '"Student ID"', "r": '"Room No."', "h": '"Hostel / Room or PS"'}
 
 while True:
-    name = input("Enter name query: ")
+    name = "%".join(input("Enter name query: ").split(' '))
     idq = input("Enter ID query (branch/year): ")
     hostel = input("Enter Hostel/PS/Graduate query: ")
     room = input("Enter room number query: ")
